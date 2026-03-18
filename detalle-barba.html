@@ -1,3 +1,4 @@
+<!-- NICOLÁS SANTIAGO CADENA SÁNCHEZ - DETALLE BARBA -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -39,7 +40,6 @@
       <li><a href="nosotros.html"  class="navbar__link">Contacto</a></li>
     </ul>
 
-    <a href="agendar.html" class="navbar__btn">Reservar ahora</a>
   </nav>
 
   <!-- CONTENIDO PRINCIPAL -->
@@ -91,53 +91,15 @@
         <!-- Galería de referencia -->
         <section class="seccion-galeria">
           <h2 class="seccion-titulo">Galería de referencia</h2>
-          <div class="galeria-grid">
-            <img class="galeria-foto" src="assets/imagenes/tipo-de-barba1.jpg" alt="Referencia de barba 1">
-            <img class="galeria-foto" src="assets/imagenes/tipo-de-barba2.jpg" alt="Referencia de barba 2">
-            <img class="galeria-foto" src="assets/imagenes/tipo-de-barba3.jpg" alt="Referencia de barba 3">
-            <img class="galeria-foto" src="assets/imagenes/tipo-de-barba4.jpg" alt="Referencia de barba 4">
-          </div>
+          <!-- se rellena esta galería con los datos de galeria[] en detalle-barba.js -->
+          <div id="galeriaContainer" class="galeria-grid"></div>
         </section>
 
         <!-- Profesionales disponibles -->
         <section class="seccion-profesionales">
           <h2 class="seccion-titulo">Profesionales disponibles</h2>
-          <div class="profesionales-grid">
-
-            <!-- Carlos Mendoza -->
-            <div class="profesional-card profesional-card--disponible"
-                 data-nombre="carlos" role="button" tabindex="0"
-                 aria-label="Seleccionar a Carlos Mendoza">
-              <div class="profesional-avatar">
-                <img src="assets/imagenes/barbero1.jpg" alt="Carlos Mendoza">
-              </div>
-              <span class="profesional-nombre">Carlos Mendoza</span>
-              <span class="badge badge--disponible">Disponible</span>
-            </div>
-
-            <!-- Andrés Lopez -->
-            <div class="profesional-card profesional-card--disponible"
-                 data-nombre="andres" role="button" tabindex="0"
-                 aria-label="Seleccionar a Andrés Lopez">
-              <div class="profesional-avatar">
-                <img src="assets/imagenes/barbero2.jpg" alt="Andrés Lopez">
-              </div>
-              <span class="profesional-nombre">Andrés Lopez</span>
-              <span class="badge badge--disponible">Disponible</span>
-            </div>
-
-            <!-- Samuel Rodriguez -->
-            <div class="profesional-card profesional-card--ocupado"
-                 data-nombre="samuel" role="button" tabindex="0"
-                 aria-label="Samuel Rodriguez no disponible">
-              <div class="profesional-avatar profesional-avatar--ocupado">
-                <img src="assets/imagenes/barbero3.jpg" alt="Samuel Rodriguez">
-              </div>
-              <span class="profesional-nombre">Samuel Rodriguez</span>
-              <span class="badge badge--ocupado">Ocupado</span>
-            </div>
-
-          </div>
+          <!-- se rellena estas cards con los datos de barberos[] en detalle-barba.js -->
+          <div id="profesionalesContainer" class="profesionales-grid"></div>
         </section>
 
       </div>
@@ -151,10 +113,8 @@
           <!-- Profesional -->
           <div class="campo-form">
             <label class="campo-label" for="select-profesional">Profesional</label>
-            <select class="campo-select" id="select-profesional" name="profesional">
-              <option value="carlos">Carlos Mendoza</option>
-              <option value="andres">Andrés Lopez</option>
-            </select>
+            <!-- se rellena las opciones con los datos de barberos[] -->
+            <select class="campo-select" id="select-profesional" name="profesional"></select>
           </div>
 
           <!-- Fecha -->
@@ -169,12 +129,8 @@
           <!-- Horas disponibles -->
           <div class="campo-form">
             <label class="campo-label">Hora Disponible</label>
-            <div class="horas-grid">
-              <button class="hora-btn hora-btn--active" type="button" data-hora="10:00">10:00</button>
-              <button class="hora-btn" type="button" data-hora="12:00">12:00</button>
-              <button class="hora-btn" type="button" data-hora="16:00">16:00</button>
-              <button class="hora-btn" type="button" data-hora="18:00">18:00</button>
-            </div>
+            <!-- se rellena los botones con los datos de horas[] -->
+            <div id="horasContainer" class="horas-grid"></div>
           </div>
 
           <hr class="divisor-card">

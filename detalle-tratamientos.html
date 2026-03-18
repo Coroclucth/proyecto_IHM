@@ -1,3 +1,4 @@
+<!-- NICOLÁS SANTIAGO CADENA SÁNCHEZ - DETALLE TRATAMIENTOS CAPILARES -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -39,7 +40,6 @@
       <li><a href="nosotros.html"  class="navbar__link">Contacto</a></li>
     </ul>
 
-    <a href="agendar.html" class="navbar__btn">Reservar ahora</a>
   </nav>
 
   <!-- ══════════════════════ CONTENIDO PRINCIPAL ══════════════════════ -->
@@ -85,18 +85,8 @@
         <!-- Filtros de tipo de tratamiento -->
         <div class="campo-form">
           <label class="tipo-label">Tipo de tratamiento</label>
-          <div class="filtros-tratamiento">
-            <button class="filtro-pill filtro-pill--active" type="button"
-                    data-tipo="keratina" data-precio="55000">Keratina</button>
-            <button class="filtro-pill" type="button"
-                    data-tipo="hidratacion" data-precio="58000">Hidratación</button>
-            <button class="filtro-pill" type="button"
-                    data-tipo="nutricion" data-precio="57000">Nutrición</button>
-            <button class="filtro-pill" type="button"
-                    data-tipo="pintura" data-precio="60000">Pintura</button>
-            <button class="filtro-pill" type="button"
-                    data-tipo="implante" data-precio="60000">Implante</button>
-          </div>
+          <!-- se rellena los pills con los datos de tratamientos[] -->
+          <div id="filtrosContainer" class="filtros-tratamiento"></div>
         </div>
 
         <hr class="divisor">
@@ -104,53 +94,15 @@
         <!-- Galería de referencia -->
         <section class="seccion-galeria">
           <h2 class="seccion-titulo">Galería de referencia</h2>
-          <div class="galeria-grid">
-            <img class="galeria-foto" src="assets/imagenes/tratamiento-capilar1.jpg" alt="Tratamiento capilar 1">
-            <img class="galeria-foto" src="assets/imagenes/tratamiento-capilar2.jpg" alt="Tratamiento capilar 2">
-            <img class="galeria-foto" src="assets/imagenes/tratamiento-capilar3.jpg" alt="Tratamiento capilar 3">
-            <img class="galeria-foto" src="assets/imagenes/tratamiento-capilar4.jpg" alt="Tratamiento capilar 4">
-          </div>
+          <!-- se rellena esta galería con los datos de galeria[] -->
+          <div id="galeriaContainer" class="galeria-grid"></div>
         </section>
 
         <!-- Profesionales disponibles -->
         <section class="seccion-profesionales">
           <h2 class="seccion-titulo">Profesionales disponibles</h2>
-          <div class="profesionales-grid">
-
-            <!-- Carlos Mendoza -->
-            <div class="profesional-card profesional-card--disponible"
-                 data-nombre="carlos" role="button" tabindex="0"
-                 aria-label="Seleccionar a Carlos Mendoza">
-              <div class="profesional-avatar">
-                <img src="assets/imagenes/barbero1.jpg" alt="Carlos Mendoza">
-              </div>
-              <span class="profesional-nombre">Carlos Mendoza</span>
-              <span class="badge badge--disponible">Disponible</span>
-            </div>
-
-            <!-- Andrés Lopez -->
-            <div class="profesional-card profesional-card--disponible"
-                 data-nombre="andres" role="button" tabindex="0"
-                 aria-label="Seleccionar a Andrés Lopez">
-              <div class="profesional-avatar">
-                <img src="assets/imagenes/barbero2.jpg" alt="Andrés Lopez">
-              </div>
-              <span class="profesional-nombre">Andrés Lopez</span>
-              <span class="badge badge--disponible">Disponible</span>
-            </div>
-
-            <!-- Samuel Rodriguez -->
-            <div class="profesional-card profesional-card--ocupado"
-                 data-nombre="samuel" role="button" tabindex="0"
-                 aria-label="Samuel Rodriguez no disponible">
-              <div class="profesional-avatar profesional-avatar--ocupado">
-                <img src="assets/imagenes/barbero3.jpg" alt="Samuel Rodriguez">
-              </div>
-              <span class="profesional-nombre">Samuel Rodriguez</span>
-              <span class="badge badge--ocupado">Ocupado</span>
-            </div>
-
-          </div>
+          <!-- se rellena estas cards con los datos de barberos[] -->
+          <div id="profesionalesContainer" class="profesionales-grid"></div>
         </section>
 
       </div>
@@ -164,22 +116,15 @@
           <!-- Tipo de tratamiento -->
           <div class="campo-form">
             <label class="campo-label" for="select-tipo">Tipo de tratamiento</label>
-            <select class="campo-select" id="select-tipo" name="tipo">
-              <option value="keratina" data-precio="55000">Keratina – $55.000</option>
-              <option value="hidratacion" data-precio="58000">Hidratación – $58.000</option>
-              <option value="nutricion" data-precio="57000">Nutrición – $57.000</option>
-              <option value="pintura" data-precio="60000">Pintura – $60.000</option>
-              <option value="implante" data-precio="60000">Implante – $60.000</option>
-            </select>
+            <!-- se rellena las opciones con los datos de tratamientos[] -->
+            <select class="campo-select" id="select-tipo" name="tipo"></select>
           </div>
 
           <!-- Profesional -->
           <div class="campo-form">
             <label class="campo-label" for="select-profesional">Profesional</label>
-            <select class="campo-select" id="select-profesional" name="profesional">
-              <option value="carlos">Carlos Mendoza</option>
-              <option value="andres">Andrés Lopez</option>
-            </select>
+            <!-- se rellena las opciones con los datos de barberos[] -->
+            <select class="campo-select" id="select-profesional" name="profesional"></select>
           </div>
 
           <!-- Fecha -->
@@ -194,12 +139,8 @@
           <!-- Horas disponibles -->
           <div class="campo-form">
             <label class="campo-label">Hora Disponible</label>
-            <div class="horas-grid">
-              <button class="hora-btn hora-btn--active" type="button" data-hora="10:00">10:00</button>
-              <button class="hora-btn" type="button" data-hora="12:00">12:00</button>
-              <button class="hora-btn" type="button" data-hora="16:00">16:00</button>
-              <button class="hora-btn" type="button" data-hora="18:00">18:00</button>
-            </div>
+            <!-- se rellena los botones con los datos de horas[] -->
+            <div id="horasContainer" class="horas-grid"></div>
           </div>
 
           <hr class="divisor-card">
@@ -225,10 +166,10 @@
           </p>
         </div>
       </aside>
-      <!-- / Columna derecha -->
+      <!-- Columna derecha -->
 
     </div>
-    <!-- / detalle-layout -->
+    <!-- detalle-layout -->
 
   </main>
 
