@@ -1,8 +1,15 @@
-/* ══════════════════════════════════════
-   DETALLE BARBA — Estilos de página
-══════════════════════════════════════ */
+/* NICOLÁS SANTIAGO CADENA SÁNCHEZ - DETALLE BARBA*/
 
-/* Footer siempre al fondo */
+.navbar {
+  position: relative;
+}
+.navbar__links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Footer */
 body {
   display: flex;
   flex-direction: column;
@@ -21,7 +28,7 @@ body {
   width: 100%;
 }
 
-/* ── Breadcrumb ── */
+/* ── navegación ── */
 .breadcrumb {
   display: flex;
   align-items: center;
@@ -407,7 +414,7 @@ body {
 .btn-confirmar {
   width: 100%;
   padding: 13px;
-  background: var(--red-accent);
+  background: #1A4DAF;
   color: var(--white);
   border: none;
   border-radius: var(--radius-sm);
