@@ -1,0 +1,185 @@
+/* aqui se centra el contenido */
+.promociones-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+/* encbaezado*/
+.promociones-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.badge-rating {
+    font-size: 0.85rem;
+    color: #A0A0A0; 
+    margin-bottom: 0.5rem;
+    font-family: var(--font-body);
+}
+
+.promociones-title {
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.header-divider {
+    border: 0;
+    border-top: 1px solid #E0E0E0;
+    width: 80%;
+    margin: 1.5rem auto 0;
+}
+
+.promociones-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* espacio entre las tarjetas de promociones */
+}
+
+/* los estilos de la tarjeta horizontal */
+.promo-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--surface);
+    border-top: 4px solid var(--red-accent); 
+    border-radius: var(--radius-md, 8px);
+    padding: 0; 
+    overflow: hidden; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+}
+
+/* oferta info */
+.promo-card__offer {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #E0E0E0; 
+}
+
+.offer-days {
+    font-size: 0.8rem;
+    color: #A0A0A0;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-body);
+}
+
+.price-old {
+    text-decoration: line-through;
+    color: var(--blue);
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+    opacity: 0.7;
+}
+
+.price-new {
+    font-size: 1.1rem;
+    color: var(--blue);
+    font-weight: 500;
+}
+
+.price-new span {
+    color: var(--red-accent);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.discount-tag {
+    color: var(--red-accent);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.price-final {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.service-list {
+    color: var(--blue);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-body);
+}
+
+/* tarjeta del titulo y boton*/
+.promo-card__action {
+    flex: 2;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.promo-title {
+    font-family: var(--font-title);
+    color: var(--blue);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.action-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.btn-reservar {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 0.75rem 2rem;
+    border-radius: var(--radius-sm, 4px);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reservar:hover {
+    background-color: #001f4d;
+}
+
+.icon-scissor {
+    color: var(--red-accent);
+    font-size: 1.2rem;
+}
+
+/* imagen de la derecha */
+.promo-card__img {
+    width: 250px; 
+    height: 150px; 
+}
+
+.promo-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* response */
+@media (max-width: 768px) {
+    .promo-card {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .promo-card__offer {
+        border-right: none;
+        border-bottom: 1px solid #E0E0E0;
+        width: 100%;
+    }
+
+    .promo-card__img {
+        width: 100%;
+        height: 200px; 
+    }
+}
