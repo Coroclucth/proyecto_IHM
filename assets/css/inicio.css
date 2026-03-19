@@ -14,7 +14,7 @@
   position: relative;
   background:
     linear-gradient(rgba(0, 45, 114, 0.75), rgba(0, 45, 114, 0.85)),
-    url('../../assets/img/hero/hero.jpg') center/cover no-repeat;
+    url('../../assets/img/hero/beckham.jpg') center/cover no-repeat;
   /* cuando tengas la imagen, el gradiente la oscurece automáticamente */
   background-color: var(--blue);
   display: flex;
