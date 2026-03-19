@@ -101,7 +101,7 @@
   padding: 2rem 1.8rem;
   width: 100%;
   max-width: 520px;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-card);
   border-top: 4px solid var(--surface);
   display: flex;
   flex-direction: column;

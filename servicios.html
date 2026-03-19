@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BarberStyle – Inicio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/inicio.css">
+  <link rel="stylesheet" href="assets/css/servicios.css">
 </head>
+
 <body>
 
   <!-- ══════════════════════ NAVBAR ══════════════════════ -->
@@ -23,7 +27,7 @@
       </button>
       <div class="navbar__logo">
         <div class="navbar__logo-img">
-          
+          <img src="assets/img/logo/logo.png" alt="logoo">
         </div>
         <div class="navbar__texts">
           <span class="navbar__brand">BARBERSTYLE</span>
@@ -33,10 +37,10 @@
     </div>
 
     <ul class="navbar__links">
-      <li><a href="index.html"         class="navbar__link navbar__link--active">Inicio</a></li>
-      <li><a href="servicios.html"     class="navbar__link">Servicios</a></li>
-      <li><a href="equipo.html"        class="navbar__link">Equipo</a></li>
-      <li><a href="nosotros.html"      class="navbar__link">Contacto</a></li>
+      <li><a href="index.html" class="navbar__link">Incicio</a></li>
+      <li><a href="servicios.html" class="navbar__link navbar__link--active">Servicios</a></li>
+      <li><a href="equipo.html" class="navbar__link">Equipo</a></li>
+      <li><a href="nosotros.html" class="navbar__link">Contacto</a></li>
     </ul>
 
     <a href="agendar.html" class="navbar__btn">Login</a>
@@ -45,8 +49,87 @@
 
   <!-- ══════════ CONTENIDO DE LA PÁGINA ══════════ -->
   <main>
-   
-     
+<div class="servicios__container">
+
+    <h2 class="servicios__titulo">Nuestros servicios</h2>
+
+    <div class="servicios__grid">
+
+      <!-- CORTE -->
+      <div class="servicio__card">
+        <div class="servicio__img">
+          <img src="assets/img/servicios/jude.png" alt="Cortes">
+        </div>
+        <div class="servicio__info">
+          <h3 class="servicio__nombre">Cortes</h3>
+          <div class="servicio__precio-wrap">
+            <div>
+              <span class="servicio__desde">DESDE</span>
+              <p class="servicio__precio">$ 25.000</p>
+              <span class="servicio__moneda">COP</span>
+            </div>
+            <a href="detalle-corte.html" class="servicio__btn">VER CATALOGO</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TINTE -->
+      <div class="servicio__card">
+        <div class="servicio__img">
+          <img src="assets/img/servicios/cr7.png" alt="Tintes">
+        </div>
+        <div class="servicio__info">
+          <h3 class="servicio__nombre">Tintes</h3>
+          <div class="servicio__precio-wrap">
+            <div>
+              <span class="servicio__desde">DESDE</span>
+              <p class="servicio__precio">$ 30.000</p>
+              <span class="servicio__moneda">COP</span>
+            </div>
+            <a href="detalle-tinte.html" class="servicio__btn">VER CATALOGO</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BARBA -->
+      <div class="servicio__card">
+        <div class="servicio__img">
+          <img src="assets/img/servicios/benzemaaa.png" alt="Barba">
+        </div>
+        <div class="servicio__info">
+          <h3 class="servicio__nombre">Barba</h3>
+          <div class="servicio__precio-wrap">
+            <div>
+              <span class="servicio__desde">DESDE</span>
+              <p class="servicio__precio">$ 15.000</p>
+              <span class="servicio__moneda">COP</span>
+            </div>
+            <a href="detalle-barba.html" class="servicio__btn">VER CATALOGO</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRATAMIENTOS -->
+      <div class="servicio__card">
+        <div class="servicio__img">
+          <img src="assets/img/servicios/keratine.png" alt="Tratamientos capilares">
+        </div>
+        <div class="servicio__info">
+          <h3 class="servicio__nombre">Tratamientos capilares</h3>
+          <div class="servicio__precio-wrap">
+            <div>
+              <span class="servicio__desde">DESDE</span>
+              <p class="servicio__precio">$ 55.000</p>
+              <span class="servicio__moneda">COP</span>
+            </div>
+            <a href="detalle-tratamientos.html" class="servicio__btn">VER CATALOGO</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>  
+
   </main>
 
   <!-- ══════════════════════ FOOTER ══════════════════════ -->
@@ -65,15 +148,15 @@
 
       <div class="footer__col footer__col--right">
         <a href="#" class="footer__social" aria-label="Facebook">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 512 512">
+            <path
+              d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5l0-170.3-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 175.9C413.8 494.8 512 386.9 512 256z" />
           </svg>
         </a>
         <a href="#" class="footer__social" aria-label="Instagram">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <circle cx="12" cy="12" r="4"/>
-            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 448 512">
+            <path
+              d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
           </svg>
         </a>
       </div>
@@ -87,4 +170,5 @@
 
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>
