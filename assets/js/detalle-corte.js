@@ -42,7 +42,7 @@ var renderPeluqueros = function () {
     var selectElem   = document.getElementById("select-profesional");
     if (!container || !selectElem) return;
 
-    peluqueros.forEach(function (barbero) {
+    peluqueros.forEach(function (peluquero) {
         // ── Card de profesional ──
         var card = document.createElement("div");
         var estadoClase = peluquero.disponible ? "profesional-card--disponible" : "profesional-card--ocupado";

@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BarberStyle – Tratamientos Capilares</title>
+  <title>BarberStyle – Tintes</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/detalle-tratamientos.css">
+  <link rel="stylesheet" href="assets/css/detalle-tinte.css">
 </head>
 <body>
 
-  <!-- ══════════════════════ NAVBAR ══════════════════════ -->
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="navbar__left">
       <button class="navbar__hamburger" aria-label="Menú">
@@ -23,7 +23,7 @@
       </button>
       <div class="navbar__logo">
         <div class="navbar__logo-img">
-          <img src="assets/imagenes/logo.png" alt="BarberStyle">
+          <img src="assets/imagenes/logo.png" alt="Logo de BarberStyle">
         </div>
         <div class="navbar__texts">
           <span class="navbar__brand">BARBERSTYLE</span>
@@ -41,30 +41,30 @@
 
   </nav>
 
-  <!-- ══════════════════════ CONTENIDO PRINCIPAL ══════════════════════ -->
+  <!-- CONTENIDO PRINCIPAL -->
   <main class="detalle-page">
 
-    <!-- Breadcrumb -->
+    <!-- navegación -->
     <nav class="breadcrumb" aria-label="Ruta de navegación">
       <a href="index.html"     class="breadcrumb__link">Inicio</a>
       <span class="breadcrumb__sep">›</span>
-      <a href="servicios.html" class="breadcrumb__link breadcrumb__link--underline">Servicios</a>
+      <a href="servicios.html" class="breadcrumb__link">Servicios</a>
       <span class="breadcrumb__sep">›</span>
-      <a href="servicios.html" class="breadcrumb__link breadcrumb__link--underline">Tratamientos Capilares</a>
+      <span class="breadcrumb__actual">Aplicacion de Tintes</span>
     </nav>
 
     <!-- Layout dos columnas -->
     <div class="detalle-layout">
 
-      <!-- ── Columna izquierda ── -->
+      <!-- Columna izquierda -->
       <div class="detalle-main">
 
         <!-- Encabezado del servicio -->
         <div class="servicio-header">
           <div>
-            <h1 class="servicio-titulo">Tratamientos Capilares</h1>
+            <h1 class="servicio-titulo">Aplicacion de Tintes</h1>
             <div class="rating-row">
-              <span class="duracion">30-35 min</span>
+              <span class="duracion">Duracion: 90min</span>
               <span class="estrellas" aria-label="4 de 5 estrellas">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -72,57 +72,45 @@
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-regular fa-star"></i>
               </span>
-              <span class="opiniones">4.0 (1201 opiniones)</span>
+              <span class="opiniones"> Incluye: lavado + Mascarilla </span>
             </div>
           </div>
-          <div class="precio-badge" id="precio-header">$55.000 – $60.000</div>
+          <div class="precio-badge">desde $40.000</div>
         </div>
 
         <!-- Descripción -->
-        <p class="servicio-desc">Breve descripción del servicio</p>
-
-        <!-- Filtros de tipo de tratamiento -->
-        <div class="campo-form">
-          <label class="tipo-label">Tipo de tratamiento</label>
-          <!-- se rellena los pills con los datos de tratamientos[] -->
-          <div id="filtrosContainer" class="filtros-tratamiento"></div>
-        </div>
+        <p class="servicio-desc">
+          Tinte profresional con productos de alta calidad y acabado natural
+        </p>
 
         <hr class="divisor">
 
         <!-- Galería de referencia -->
         <section class="seccion-galeria">
           <h2 class="seccion-titulo">Galería de referencia</h2>
-          <!-- se rellena esta galería con los datos de galeria[] -->
+          <!-- se rellena esta galería con los datos de galeria[] en detalle-tinte.js -->
           <div id="galeriaContainer" class="galeria-grid"></div>
         </section>
 
         <!-- Profesionales disponibles -->
         <section class="seccion-profesionales">
           <h2 class="seccion-titulo">Profesionales disponibles</h2>
-          <!-- se rellena estas cards con los datos de barberos[] -->
+          <!-- se rellena estas cards con los datos de peluqueros[] en detalle-tinte.js -->
           <div id="profesionalesContainer" class="profesionales-grid"></div>
         </section>
 
       </div>
-      <!-- / Columna izquierda -->
+      <!-- Columna izquierda -->
 
-      <!-- ── Columna derecha: card de reserva ── -->
+      <!-- Columna derecha: card de reserva -->
       <aside class="detalle-sidebar">
         <div class="reserva-card">
           <h2 class="reserva-titulo">Reservar este servicio</h2>
 
-          <!-- Tipo de tratamiento -->
-          <div class="campo-form">
-            <label class="campo-label" for="select-tipo">Tipo de tratamiento</label>
-            <!-- se rellena las opciones con los datos de tratamientos[] -->
-            <select class="campo-select" id="select-tipo" name="tipo"></select>
-          </div>
-
           <!-- Profesional -->
           <div class="campo-form">
             <label class="campo-label" for="select-profesional">Profesional</label>
-            <!-- se rellena las opciones con los datos de barberos[] -->
+            <!-- se rellena las opciones con los datos de peluqueros[] -->
             <select class="campo-select" id="select-profesional" name="profesional"></select>
           </div>
 
@@ -146,12 +134,12 @@
 
           <!-- Resumen de precio -->
           <div class="precio-resumen">
-            <span class="precio-resumen__nombre" id="resumen-nombre">Tratamiento de Keratina</span>
-            <span class="precio-resumen__valor" id="resumen-valor">$55.000</span>
+            <span class="precio-resumen__nombre">Aplicacion de Tintes</span>
+            <span class="precio-resumen__valor">$58.000</span>
           </div>
           <div class="precio-total">
             <span class="precio-total__label">Total</span>
-            <span class="precio-total__valor" id="total-valor">$55.000</span>
+            <span class="precio-total__valor">$58.000</span>
           </div>
 
           <!-- Botones -->
@@ -197,6 +185,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/detalle-tratamientos.js"></script>
+  <script src="assets/js/detalle-barba.js"></script>
 </body>
 </html>

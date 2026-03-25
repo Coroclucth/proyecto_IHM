@@ -1,4 +1,3 @@
-/* Navbar*/
 .navbar {
   position: relative;
 }
@@ -27,7 +26,7 @@ body {
   width: 100%;
 }
 
-/* ── NAVEGACIÓN ── */
+/* ── navegación ── */
 .breadcrumb {
   display: flex;
   align-items: center;
@@ -46,13 +45,13 @@ body {
   color: var(--blue-primary);
 }
 
-.breadcrumb__link--underline {
-  text-decoration: underline;
-  color: var(--blue-primary);
-}
-
 .breadcrumb__sep {
   color: var(--text-secondary);
+}
+
+.breadcrumb__actual {
+  color: var(--blue-primary);
+  font-weight: 500;
 }
 
 /* ── Layout dos columnas ── */
@@ -138,45 +137,6 @@ body {
   border: none;
   border-top: 1px solid var(--border);
   margin: .25rem 0;
-}
-
-/* ── Filtros de tipo de tratamiento ── */
-.tipo-label {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  font-family: var(--font-body);
-  margin-bottom: 8px;
-  display: block;
-}
-
-.filtros-tratamiento {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.filtro-pill {
-  padding: 7px 20px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--white);
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  color: var(--text-dark);
-  cursor: pointer;
-  transition: all .2s;
-}
-
-.filtro-pill:hover {
-  border-color: var(--blue-primary);
-  color: var(--blue-primary);
-}
-
-.filtro-pill--active {
-  background: var(--blue);
-  border-color: var(--blue);
-  color: var(--white);
-  font-weight: 500;
 }
 
 /* ── Sección genérica ── */
@@ -277,7 +237,7 @@ body {
   text-align: center;
 }
 
-/* Badges */
+/* Badges de disponibilidad */
 .badge--disponible {
   background: #D4EDDA;
   color: #276237;
