@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       alert("Has seleccionado: " + promo + " 💈");
 
-      // Guardar en localStorage como tu amigo
+      
       localStorage.setItem("promo_seleccionada", promo);
 
       // Redirigir
