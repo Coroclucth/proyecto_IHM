@@ -5,11 +5,11 @@ var servicio = {
 
 var peluqueros = [
     { nombre: "Carlos Mendoza",   valor: "carlos", imagen: "assets/imagenes/barbero1.jpg", disponible: true  },
-    { nombre: "Andrés Lopez",     valor: "andres", imagen: "assets/imagenes/barbero2.jpg", disponible: true  },
+    { nombre: "Andrés López",     valor: "andres", imagen: "assets/imagenes/barbero2.jpg", disponible: true  },
     { nombre: "Samuel Rodriguez", valor: "samuel", imagen: "assets/imagenes/barbero3.jpg", disponible: false }
 ];
 
-var horas = ["3:00", "12:00", "16:00", "18:00"];
+var horas = ["03:00", "12:00", "16:00", "18:00"];
 
 var galeria = [
     { src: "assets/imagenes/corte1.jpeg", alt: "Referencia de corte 1" },
@@ -28,6 +28,8 @@ var renderGaleria = function () {
     var container = document.getElementById("galeriaContainer");
     if (!container) return;
 
+    container.innerHTML = "";
+
     galeria.forEach(function (foto) {
         var img = document.createElement("img");
         img.className = "galeria-foto";
@@ -42,7 +44,10 @@ var renderPeluqueros = function () {
     var selectElem   = document.getElementById("select-profesional");
     if (!container || !selectElem) return;
 
+    container.innerHTML = "";
+
     peluqueros.forEach(function (peluquero) {
+
         // ── Card de profesional ──
         var card = document.createElement("div");
         var estadoClase = peluquero.disponible ? "profesional-card--disponible" : "profesional-card--ocupado";
@@ -70,7 +75,7 @@ var renderPeluqueros = function () {
         if (peluquero.disponible) {
             var option = document.createElement("option");
             option.value       = peluquero.valor;
-            option.textContent = peluqueros.nombre;
+            option.textContent = peluquero.nombre;
             selectElem.appendChild(option);
         }
     });
@@ -79,6 +84,8 @@ var renderPeluqueros = function () {
 var renderHoras = function () {
     var container = document.getElementById("horasContainer");
     if (!container) return;
+
+    container.innerHTML = "";
 
     horas.forEach(function (hora, indice) {
         var btn = document.createElement("button");
@@ -106,6 +113,11 @@ var initEvents = function () {
                 horaSeleccionada = e.target.getAttribute("data-hora");
             }
         });
+
+                if (!horaSeleccionada) {
+                    alert("Selecciona una hora.");
+                    return;
+                }
     }
 
     // ── Selección de profesional desde las cards ──
@@ -138,6 +150,12 @@ var initEvents = function () {
             var profesional = selectProf.options[selectProf.selectedIndex]
                 ? selectProf.options[selectProf.selectedIndex].text
                 : "Sin seleccionar";
+
+                if (!selectProf.value) {
+                    alert("Por favor selecciona un profesional.");
+                    return;
+                }
+
             var fecha = document.getElementById("input-fecha").value;
 
             if (!fecha) {

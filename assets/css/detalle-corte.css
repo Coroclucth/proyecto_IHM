@@ -1,10 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+/*Variables globales */
+:root{
+  --blue: #1A4DAF;
+  --blue-primary: #1A4DAF;
+  --text-secondary: #6b7280;
+  --text-dark: #111827;
+  --border: #e5e7eb;
+  --white: #ffffff;  
+}
+
 .navbar {
   position: relative;
 }
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .navbar__links {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: static;
+  transform:none;
 }
 
 /* Footer */
@@ -14,12 +34,9 @@ body {
   min-height: 100vh;
 }
 
-.detalle-page {
-  flex: 1;
-}
-
 /* Página completa */
 .detalle-page {
+  flex: 1;
   max-width: 1400px;
   margin: 0 auto;
   padding: 1.5rem 4rem 4rem;
@@ -424,7 +441,7 @@ body {
 }
 
 .btn-confirmar:hover {
-  background: #a50d25;
+  background: #163d8f;
   transform: translateY(-1px);
 }
 

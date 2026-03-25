@@ -1,5 +1,5 @@
 var servicio = {
-    nombre: "Aplicacion de Tinte",
+    nombre: "Aplicación de Tintes",
     precio: "$58.000"
 };
 
@@ -28,6 +28,8 @@ var renderGaleria = function () {
     var container = document.getElementById("galeriaContainer");
     if (!container) return;
 
+    container.innerHTML = "";
+
     galeria.forEach(function (foto) {
         var img = document.createElement("img");
         img.className = "galeria-foto";
@@ -41,6 +43,9 @@ var renderPeluqueros = function () {
     var container    = document.getElementById("profesionalesContainer");
     var selectElem   = document.getElementById("select-profesional");
     if (!container || !selectElem) return;
+
+    container.innerHTML = "";
+    selectElem.innerHTML = "";
 
     peluqueros.forEach(function (peluquero) {
         // ── Card de profesional ──
@@ -70,7 +75,7 @@ var renderPeluqueros = function () {
         if (peluquero.disponible) {
             var option = document.createElement("option");
             option.value       = peluquero.valor;
-            option.textContent = peluqueros.nombre;
+            option.textContent = peluquero.nombre;
             selectElem.appendChild(option);
         }
     });
@@ -135,9 +140,15 @@ var initEvents = function () {
     var btnConfirmar = document.getElementById("btn-confirmar");
     if (btnConfirmar && selectProf) {
         btnConfirmar.addEventListener("click", function () {
-            var profesional = selectProf.options[selectProf.selectedIndex]
-                ? selectProf.options[selectProf.selectedIndex].text
-                : "Sin seleccionar";
+            var profesional = selectProf.value 
+            ? selectProf.options[selectProf.selectedIndex].text 
+            : null;
+            
+            if (!profesional) {
+                alert("Por favor selecciona un profesional.");
+                return;
+            }
+            
             var fecha = document.getElementById("input-fecha").value;
 
             if (!fecha) {
@@ -153,7 +164,7 @@ var initEvents = function () {
                 precio:      servicio.precio
             };
 
-            localStorage.setItem("reserva_corte", JSON.stringify(reserva));
+            localStorage.setItem("reserva_tinte", JSON.stringify(reserva));
 
             alert(
                 "¡Reserva guardada!\n\n" +
