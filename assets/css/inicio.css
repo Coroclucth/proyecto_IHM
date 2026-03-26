@@ -1,23 +1,35 @@
 /* ══════════════════════════════════════
+   LAYOUT PRINCIPAL 50/50
+══════════════════════════════════════ */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - 64px - 60px);
+}
+
+/* ══════════════════════════════════════
    HERO
 ══════════════════════════════════════ */
 .hero {
-  min-height: calc(100vh - 62px);
-  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-lt) 100%);
+  position: relative;
+  background:
+    linear-gradient(rgba(0, 45, 114, 0.75), rgba(0, 45, 114, 0.85)),
+    url('../../assets/img/hero/beckham.jpg') center/cover no-repeat;
+  /* cuando tengas la imagen, el gradiente la oscurece automáticamente */
+  background-color: var(--blue);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-  padding: 4rem 6rem;
+  padding: 4rem;
 }
 
 .hero__content {
-  flex: 1;
-  max-width: 560px;
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
 }
 
 .hero__label {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: .2em;
   text-transform: uppercase;
@@ -35,160 +47,320 @@
 }
 
 .hero__desc {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: rgba(255,255,255,.75);
   line-height: 1.7;
   margin-bottom: 2rem;
 }
 
-.hero__btns {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
 .btn--outline-white {
+  display: inline-block;
   background: transparent;
   color: var(--white);
-  border: 2px solid rgba(255,255,255,.5);
+  border: 2px solid rgba(255,255,255,.6);
   padding: 10px 24px;
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
   border-radius: var(--radius-sm);
   transition: all .2s;
 }
 
 .btn--outline-white:hover {
-  background: rgba(255,255,255,.1);
+  background: rgba(255,255,255,.12);
   border-color: var(--white);
 }
-
-.hero__img {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.navbar__logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
-.hero__img-placeholder {
-  width: 420px;
-  height: 320px;
-  background: rgba(255,255,255,.08);
-  border: 2px dashed rgba(255,255,255,.25);
-  border-radius: var(--radius-lg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: .8rem;
+.navbar__logo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-
-.hero__img-placeholder span { font-size: 3rem; opacity: .4; }
-.hero__img-placeholder p    { font-size: .85rem; color: rgba(255,255,255,.4); }
 
 /* ══════════════════════════════════════
-   SERVICIOS RÁPIDOS
+   FORMULARIO DE RESERVA
 ══════════════════════════════════════ */
-.servicios-rapidos { background: var(--offwhite); }
-
-.servicios-rapidos__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.2rem;
-}
-
-.svc-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: .5rem;
-  transition: transform .22s, box-shadow .22s;
-  cursor: pointer;
-}
-
-.svc-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-
-.svc-card__icon  { font-size: 2.2rem; }
-.svc-card__name  { font-family: var(--font-title); font-size: 1.1rem; font-weight: 700; color: var(--blue); }
-.svc-card__desc  { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; }
-.svc-card__precio{ font-size: 1rem; font-weight: 700; color: var(--blue-primary); margin-top: .3rem; }
-.svc-card__cta   { font-size: 0.8rem; color: var(--blue-cta); font-weight: 500; margin-top: .2rem; }
-
-/* ══════════════════════════════════════
-   PROMOCIONES PREVIEW
-══════════════════════════════════════ */
-.promos-preview {
+.reserva {
   background: var(--surface);
-}
-
-.promos-preview__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.promo-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-top: 4px solid var(--blue-cta);
-  border-radius: var(--radius-md);
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: .8rem;
-  box-shadow: var(--shadow-sm);
-  transition: transform .22s, box-shadow .22s;
-}
-
-.promo-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-}
-
-.promo-card__badge {
-  display: inline-block;
-  padding: 3px 12px;
-  background: var(--blue-primary);
-  color: var(--white);
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  width: fit-content;
-}
-
-.promo-card__title { font-family: var(--font-title); font-size: 1.3rem; font-weight: 700; color: var(--blue); }
-.promo-card__desc  { font-size: 0.9rem; color: var(--text-secondary); }
-
-.promo-card__precios {
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  overflow-y: auto;
+}
+
+.reserva__card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.8rem;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: var(--shadow-card);
+  border-top: 4px solid var(--surface);
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
-.promo-card__antes {
-  font-size: 0.95rem;
+.reserva__title {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.reserva__sub {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-top: -.6rem;
+}
+
+.reserva__label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: .4rem;
+}
+
+.reserva__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .8rem;
+}
+
+.reserva__input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-dark);
+  background: var(--surface);
+  transition: border-color .2s;
+  outline: none;
+}
+
+.reserva__input:focus {
+  border-color: var(--blue-lt);
+}
+
+/* Servicios */
+.reserva__services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .6rem;
+}
+
+.svc-pill {
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: .7rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all .2s;
+  background: var(--surface);
+}
+
+.svc-pill:hover {
+  border-color: var(--blue-lt);
+}
+
+.svc-pill--active {
+  border-color: var(--blue-primary);
+  background: var(--blue-primary);
+}
+
+.svc-pill--active .svc-pill__name,
+.svc-pill--active .svc-pill__price {
+  color: var(--white);
+}
+
+.svc-pill__name {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.svc-pill__price {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+/* Barberos */
+.reserva__barbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .6rem;
+}
+
+.barber-card {
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: .7rem .5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all .2s;
+  background: var(--surface);
+}
+
+.barber-card:hover { border-color: var(--blue-lt); }
+
+.barber-card--active {
+  border-color: var(--blue-primary);
+  background: var(--blue-primary);
+}
+
+.barber-card--active .barber-card__name,
+.barber-card--active .barber-card__tag {
+  color: var(--white);
+}
+
+.barber-card__img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--blue-lt);
+  margin: 0 auto .4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--white);
+  overflow: hidden;
+}
+
+.barber-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.barber-card__name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.barber-card__tag {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+/* Días */
+.reserva__days {
+  display: flex;
+  gap: .4rem;
+  flex-wrap: wrap;
+}
+
+.day-pill {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: .4rem .6rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all .2s;
+  background: var(--surface);
+  min-width: 44px;
+}
+
+.day-pill:hover { border-color: var(--blue-lt); }
+
+.day-pill--active {
+  background: var(--blue-primary);
+  border-color: var(--blue-primary);
+}
+
+.day-pill--active .day-pill__name,
+.day-pill--active .day-pill__num {
+  color: var(--white);
+}
+
+.day-pill__name {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.day-pill__num {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blue);
+  line-height: 1.2;
+}
+
+/* Slots */
+.reserva__slots {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .4rem;
+}
+
+.slot {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: .5rem;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all .2s;
+  background: var(--surface);
+}
+
+.slot:hover { border-color: var(--blue-lt); }
+
+.slot--taken {
+  background: var(--offwhite);
   color: var(--text-secondary);
   text-decoration: line-through;
+  cursor: not-allowed;
+  border-color: var(--border);
 }
 
-.promo-card__ahora {
-  font-family: var(--font-title);
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--blue-primary);
+.slot--selected {
+  background: var(--blue-primary);
+  border-color: var(--blue-primary);
+  color: var(--white);
 }
 
-.promos-preview__footer {
-  text-align: center;
-  margin-top: 1rem;
+/* Botón confirmar */
+.reserva__btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--blue-primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  cursor: pointer;
+  transition: background .2s, transform .15s;
+  margin-top: .5rem;
+}
+
+.reserva__btn:hover {
+  background: var(--blue-cta);
+  transform: translateY(-1px);
 }
